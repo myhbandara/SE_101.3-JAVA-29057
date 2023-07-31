@@ -1,0 +1,71 @@
+public class Employee {
+ private String name;
+ private int age;
+ private double salary;
+ // Getter and Setter methods for Name
+ public String getName() {
+ return name;
+ }
+ public void setName(String name) {
+ this.name = name;
+ }
+ // Getter and Setter methods for Age
+ public int getAge() {
+ return age;
+ }
+ public void setAge(int age) {
+ this.age = age;
+ }
+ // Getter and Setter methods for Salary
+ public double getSalary() {
+ return salary;
+ }
+ public void setSalary(double salary) {
+ this.salary = salary;
+ }
+}
+public class TestEmployee {
+ public static void main(String[] args) {
+ // Create an instance of Employee
+ Employee emp = new Employee();
+ // Use setter methods to set the values
+ emp.setName("Bogdan");
+ emp.setSalary(50000);
+ // Bonus value passed through constructor
+ double bonus = 10000;
+ // Calculate bonus amount using a separate method
+ double bonusAmount = emp.calculateBonusAmount(bonus);
+ // Display the output
+ System.out.println("Employee Name: " + emp.getName());
+ System.out.println("Basic Salary: " + emp.getSalary());
+ System.out.println("Bonus: " + bonus);
+ System.out.println("Bonus Amount: " + bonusAmount);
+ }
+}
+public class Employee {
+ private String name;
+ private double salary;
+ // Constructor to set Name, Age, and Salary
+ public Employee(String name, double salary) {
+ this.name = name;
+ this.salary = salary;
+ }
+ // Getter and Setter methods for Name
+ public String getName() {
+ return name;
+ }
+ public void setName(String name) {
+ this.name = name;
+ }
+ // Getter and Setter methods for Salary
+ public double getSalary() {
+ return salary;
+ }
+ public void setSalary(double salary) {
+ this.salary = salary;
+ }
+ // Method to calculate Bonus Amount
+ public double calculateBonusAmount(double bonus) {
+ return salary + bonus;
+ }
+}
